@@ -18,14 +18,14 @@
     });
   }
 
+  // "education" is parked (hidden) for now — re-add to SECTIONS + render() to restore.
   var SECTIONS = [
     "interests",
-    "projects",
     "publications",
     "skills",
     "experience",
-    "education",
     "contact",
+    "projects",
   ];
 
   function renderHeader() {
@@ -236,6 +236,7 @@
     );
   }
 
+  // Parked: hidden from the page for now. Re-add to SECTIONS + render() to restore.
   function education() {
     var u = DATA.ui[lang];
     var html =
@@ -293,12 +294,11 @@
     renderHeader();
     document.getElementById("app").innerHTML =
       hero() +
-      projects() +
       publications() +
       skills() +
       experience() +
-      education() +
-      contact();
+      contact() +
+      projects();
     document.getElementById("footNote").textContent =
       "© " + new Date().getFullYear() + " " + t(DATA.profile.name) + ".";
     document.getElementById("footMeta").textContent =

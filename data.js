@@ -4,8 +4,8 @@ window.PORTFOLIO = {
   profile: {
     name: { en: "Moses Kim", ko: "김모세" },
     title: {
-      en: "Reliability & Quality Engineer · Physicist",
-      ko: "신뢰성·품질 엔지니어 · 물리학자",
+      en: "Reliability & Quality Engineer",
+      ko: "신뢰성·품질 엔지니어",
     },
     summary: {
       en: "Physicist and reliability/quality engineer working on semiconductor reliability and quality systems. Focused on accelerated life testing, failure analysis, and data-driven quality, with a background in optical simulation and machine learning.",

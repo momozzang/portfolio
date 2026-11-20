@@ -93,7 +93,7 @@ window.PORTFOLIO = {
     {
       company: { en: "Mokpo National University", ko: "목포대학교" },
       role: { en: "Teaching Assistant, General Physics Laboratory", ko: "일반물리실험 조교" },
-      period: "2023",
+      period: "2023 – 2024",
       summary: {
         en: "Assisted lab sessions, guided students, and graded lab reports.",
         ko: "실험 수업 보조, 학생 지도, 실험 보고서 채점.",
@@ -126,6 +126,7 @@ window.PORTFOLIO = {
         ko: "점심 메뉴 추천 서비스",
       },
       period: "2022",
+      year: 2022,
       role: { en: "Project Manager · UI/UX · Frontend", ko: "PM · UI/UX · 프론트엔드" },
       tech: ["JavaScript", "HTML / CSS", "Web"],
       description: {
@@ -139,6 +140,7 @@ window.PORTFOLIO = {
         ko: "블랙박스 영상 과실비율 산출",
       },
       period: "2022",
+      year: 2022,
       role: { en: "UI/UX · Machine Learning", ko: "UI/UX · 머신러닝" },
       tech: ["Python", "YOLOv5", "PyTorch", "Computer Vision"],
       description: {
@@ -152,6 +154,7 @@ window.PORTFOLIO = {
         ko: "빅데이터 기반 양식 생산성 향상",
       },
       period: "2023 – 2024",
+      year: 2024,
       role: { en: "Student Researcher", ko: "학생 연구원" },
       tech: ["Python", "Machine Learning", "Data Analysis"],
       description: {
@@ -165,6 +168,7 @@ window.PORTFOLIO = {
         ko: "상온 엑시톤-폴라리톤 E-k 분산 연구",
       },
       period: "2023 – 2025",
+      year: 2025,
       role: { en: "Student Researcher", ko: "학생 연구원" },
       tech: ["Python", "Optical simulation", "Perovskite devices"],
       description: {

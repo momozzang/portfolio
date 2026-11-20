@@ -20,10 +20,10 @@
 
   var SECTIONS = [
     "interests",
-    "skills",
-    "experience",
     "projects",
     "publications",
+    "skills",
+    "experience",
     "education",
     "contact",
   ];
@@ -161,6 +161,10 @@
   function projects() {
     var u = DATA.ui[lang];
     var cards = DATA.projects
+      .slice()
+      .sort(function (a, b) {
+        return (b.year || 0) - (a.year || 0);
+      })
       .map(function (p) {
         var tech = (p.tech || [])
           .map(function (x) {
@@ -292,10 +296,10 @@
     renderHeader();
     document.getElementById("app").innerHTML =
       hero() +
-      skills() +
-      experience() +
       projects() +
       publications() +
+      skills() +
+      experience() +
       education() +
       contact();
     document.getElementById("footNote").textContent =

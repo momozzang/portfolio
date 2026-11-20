@@ -83,7 +83,10 @@ window.PORTFOLIO = {
   experience: [
     {
       company: "ELSPES",
-      role: { en: "QA PM · Acting QA Manager", ko: "QA PM · 품질보증실 실장 대행" },
+      role: {
+        en: "Quality Assurance PM · Reliability Engineer",
+        ko: "품질보증 PM · 신뢰성 엔지니어",
+      },
       period: "2025.01 – present",
       summary: {
         en: "Quality assurance for semiconductor components: reliability test design and analysis, quality management systems (AS9100, ISO 9001), supplier quality, and QA operations.",

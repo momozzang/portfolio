@@ -24,8 +24,8 @@
     "publications",
     "skills",
     "experience",
-    "contact",
     "projects",
+    "contact",
   ];
 
   function renderHeader() {
@@ -297,8 +297,8 @@
       publications() +
       skills() +
       experience() +
-      contact() +
-      projects();
+      projects() +
+      contact();
     document.getElementById("footNote").textContent =
       "© " + new Date().getFullYear() + " " + t(DATA.profile.name) + ".";
   }

@@ -301,8 +301,6 @@
       projects();
     document.getElementById("footNote").textContent =
       "© " + new Date().getFullYear() + " " + t(DATA.profile.name) + ".";
-    document.getElementById("footMeta").textContent =
-      t(DATA.profile.title) + " · " + t(DATA.profile.location);
   }
 
   document

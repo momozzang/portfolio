@@ -103,8 +103,8 @@ window.PORTFOLIO = {
       role: { en: "Construction Administrator (Wind Power)", ko: "시공 관리 (풍력)" },
       period: "2021 – 2022",
       summary: {
-        en: "Quality inspection and field management for wind turbine installation (Vestas, Siemens Gamesa).",
-        ko: "풍력터빈 설치 현장의 품질 검사 및 현장 관리 (Vestas, Siemens Gamesa).",
+        en: "Quality inspection and field management for wind turbine installation.",
+        ko: "풍력터빈 설치 현장의 품질 검사 및 현장 관리.",
       },
     },
     {

@@ -91,6 +91,15 @@ window.PORTFOLIO = {
       },
     },
     {
+      company: { en: "Mokpo National University", ko: "목포대학교" },
+      role: { en: "Teaching Assistant, General Physics Laboratory", ko: "일반물리실험 조교" },
+      period: "2023",
+      summary: {
+        en: "Assisted lab sessions, guided students, and graded lab reports.",
+        ko: "실험 수업 보조, 학생 지도, 실험 보고서 채점.",
+      },
+    },
+    {
       company: "CN Plus",
       role: { en: "Construction Administrator (Wind Power)", ko: "시공 관리 (풍력)" },
       period: "2021 – 2022",
@@ -100,12 +109,12 @@ window.PORTFOLIO = {
       },
     },
     {
-      company: { en: "Mokpo National University", ko: "목포대학교" },
-      role: { en: "Teaching Assistant · Instructor", ko: "조교 · 강사" },
-      period: "2018 – 2023",
+      company: { en: "Mathematics Academy", ko: "수학학원" },
+      role: { en: "Math Instructor", ko: "수학 강사" },
+      period: "2018.11 – 2020.12",
       summary: {
-        en: "General physics laboratory teaching assistant; mathematics instructor and mentor.",
-        ko: "일반물리실험 조교, 수학 강사 및 진로 멘토.",
+        en: "Taught math for elementary, middle, and high school students; academic counseling.",
+        ko: "초·중·고등학생 수학 지도 및 입시 상담.",
       },
     },
   ],

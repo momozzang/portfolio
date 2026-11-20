@@ -51,7 +51,6 @@ window.PORTFOLIO = {
       items: [
         "Semiconductor technology",
         "Si capacitor",
-        "RF devices",
         "Optical simulation",
         "Physics & energy engineering",
       ],

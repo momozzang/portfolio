@@ -313,5 +313,11 @@
       render();
     });
 
+  // Always start at the top on load/refresh (disable browser scroll restoration).
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+ window.addEventListener("load", function () {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  });
+
   render();
 })();

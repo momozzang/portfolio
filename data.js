@@ -83,7 +83,7 @@ window.PORTFOLIO = {
         en: "Quality Assurance PM · Reliability Engineer",
         ko: "품질보증 PM · 신뢰성 엔지니어",
       },
-      period: "2025.01 – present",
+      period: "2025 – present",
       summary: {
         en: "Quality assurance for semiconductor components: reliability test design and analysis, quality management systems (AS9100, ISO 9001), supplier quality, and QA operations.",
         ko: "반도체 부품 품질보증: 신뢰성 시험 설계·분석, 품질 경영 시스템(AS9100, ISO 9001), 공급업체 품질, QA 운영.",
@@ -110,7 +110,7 @@ window.PORTFOLIO = {
     {
       company: { en: "Mathematics Academy", ko: "수학학원" },
       role: { en: "Math Instructor", ko: "수학 강사" },
-      period: "2018.11 – 2020.12",
+      period: "2018 – 2020",
       summary: {
         en: "Taught math for elementary, middle, and high school students; academic counseling.",
         ko: "초·중·고등학생 수학 지도 및 입시 상담.",

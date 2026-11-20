@@ -249,7 +249,6 @@ window.PORTFOLIO = {
       education: "Education",
       awards: "Awards",
       contact: "Contact",
-      available: "Open to opportunities",
       toggle: "한국어",
     },
     ko: {
@@ -261,7 +260,6 @@ window.PORTFOLIO = {
       education: "학력",
       awards: "수상",
       contact: "연락처",
-      available: "기회에 열려 있음",
       toggle: "English",
     },
   },

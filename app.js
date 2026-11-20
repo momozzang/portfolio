@@ -58,9 +58,6 @@
       .join("");
     return (
       '<section class="hero">' +
-      '<p class="eyebrow">' +
-      esc(u.available) +
-      "</p>" +
       "<h1>" +
       esc(t(p.name)) +
       "</h1>" +

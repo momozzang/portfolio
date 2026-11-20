@@ -104,19 +104,6 @@ body {
   padding: 72px 0 40px;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin: 0 0 18px;
-}
-
 h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   line-height: 1.05;

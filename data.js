@@ -26,9 +26,6 @@ window.PORTFOLIO = {
     { en: "Semiconductor reliability", ko: "반도체 신뢰성" },
     { en: "Si capacitor", ko: "Si 커패시터" },
     { en: "Quality systems", ko: "품질 시스템" },
-    { en: "AI tooling", ko: "AI 툴링" },
-    { en: "Computer vision", ko: "컴퓨터 비전" },
-    { en: "Optical simulation", ko: "광학 시뮬레이션" },
   ],
 
   skills: [

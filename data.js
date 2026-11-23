@@ -147,8 +147,8 @@ window.PORTFOLIO = {
       role: { en: "Reliability Engineer", ko: "신뢰성 엔지니어" },
       tech: ["RF-HTOL", "Reliability"],
       description: {
-        en: "Reliability evaluation of RF devices using RF-HTOL.",
-        ko: "RF 소자의 RF-HTOL 신뢰성 평가.",
+        en: "Reliability evaluation of RF devices using RF-HTOL. Set the test conditions and carried out failure analysis (FA).",
+        ko: "RF 소자의 RF-HTOL 신뢰성 평가. 시험 조건 설정 및 불량 분석(FA) 수행.",
       },
     },
     {
@@ -158,8 +158,8 @@ window.PORTFOLIO = {
       role: { en: "Quality Assurance PM", ko: "품질보증 PM" },
       tech: ["AS9100", "QMS"],
       description: {
-        en: "Aerospace quality management system (AS9100) certification.",
-        ko: "항공우주 품질 경영 시스템(AS9100) 인증.",
+        en: "Aerospace quality management system (AS9100) certification. Led the certification, handled the main audit response, and provided consulting to each department.",
+        ko: "항공우주 품질 경영 시스템(AS9100) 인증. 인증 총괄, 메인 심사 대응, 각 부서 컨설팅 수행.",
       },
     },
     {
@@ -200,8 +200,8 @@ window.PORTFOLIO = {
       role: { en: "Student Researcher", ko: "학생 연구원" },
       tech: ["Python", "Machine Learning", "Data Analysis"],
       description: {
-        en: "Development of efficient machine learning techniques for aquaculture productivity (Ministry of Oceans and Fisheries).",
-        ko: "양식 생산성 향상을 위한 효율적 ML 기법 개발 (해양수산부).",
+        en: "Research and development of efficient machine learning techniques for aquaculture productivity (Ministry of Oceans and Fisheries). Worked on an image analysis algorithm for flounder.",
+        ko: "양식 생산성 향상을 위한 효율적 ML 기법 연구·개발 (해양수산부). 광어 이미지 분석 알고리즘 연구.",
       },
     },
     {
@@ -214,8 +214,8 @@ window.PORTFOLIO = {
       role: { en: "Student Researcher", ko: "학생 연구원" },
       tech: ["Python", "Optical simulation", "Perovskite devices"],
       description: {
-        en: "Superposition of exciton-polariton E-k dispersion in halide perovskite devices (National Research Foundation of Korea).",
-        ko: "할라이드 페로브스카이트 소자의 엑시톤-폴라리톤 E-k 분산 중첩 연구 (국립연구재단).",
+        en: "Superposition of exciton-polariton E-k dispersion in halide perovskite devices (National Research Foundation of Korea). Optical image analysis: RGB-to-XYZ color conversion by perovskite thickness under light-source intensity, and color charts.",
+        ko: "할라이드 페로브스카이트 소자의 엑시톤-폴라리톤 E-k 분산 중첩 연구 (국립연구재단). 광학 이미지 분석: 광원 인텐시티에 비례한 페로브스카이트 두께별 색상 분석(RGB→XYZ 변환 계산, 컬러 차트 제작).",
       },
     },
   ],

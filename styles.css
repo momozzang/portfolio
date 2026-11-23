@@ -107,16 +107,9 @@ a {
 }
 
 .hero .lead {
-  margin: 8px 0 24px;
+  margin: 8px 0 20px;
   font-size: 1.15rem;
   color: var(--muted);
-}
-
-.hero .summary {
-  margin: 0 0 20px;
-  max-width: 62ch;
-  font-size: 1.02rem;
-  line-height: 1.85;
 }
 
 .hero .interests {

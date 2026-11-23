@@ -7,10 +7,6 @@ window.PORTFOLIO = {
       en: "Reliability & Quality Engineer",
       ko: "신뢰성·품질 엔지니어",
     },
-    summary: {
-      en: "Physicist and reliability/quality engineer working on semiconductor reliability and quality systems. Focused on accelerated life testing, failure analysis, and data-driven quality, with a background in optical simulation and machine learning.",
-      ko: "반도체 신뢰성과 품질 시스템을 다루는 물리학자이자 신뢰성·품질 엔지니어. 가속 수명 시험, 불량 분석, 데이터 기반 품질 관리와 광학 시뮬레이션·머신러닝 배경을 바탕으로 일합니다.",
-    },
     location: { en: "Republic of Korea", ko: "대한민국" },
     email: "physix9179@gmail.com",
     links: [

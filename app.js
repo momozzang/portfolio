@@ -102,8 +102,6 @@
       esc(t(p.name)) +
       '</h1><p class="lead">' +
       esc(t(p.title)) +
-      '</p><p class="summary">' +
-      esc(t(p.summary)) +
       '</p><p class="interests"><span>' +
       esc(u.interests) +
       "</span>" +

@@ -263,16 +263,6 @@ window.PORTFOLIO = {
     },
   ],
 
-  awards: [
-    {
-      text: {
-        en: "Academic Excellence Scholarship, Mokpo National University",
-        ko: "목포대학교 성적우수 장학금",
-      },
-      period: "2023 – 2024",
-    },
-  ],
-
   ui: {
     en: {
       interests: "Interests",
@@ -281,7 +271,6 @@ window.PORTFOLIO = {
       projects: "Projects",
       publications: "Publications",
       education: "Education",
-      awards: "Awards",
       contact: "Contact",
       toggle: "한국어",
     },
@@ -292,7 +281,6 @@ window.PORTFOLIO = {
       projects: "프로젝트",
       publications: "논문",
       education: "학력",
-      awards: "수상",
       contact: "연락처",
       toggle: "English",
     },

@@ -255,14 +255,6 @@
       '</h2><div class="timeline">' +
       timeline(DATA.education) +
       "</div>";
-    if (DATA.awards && DATA.awards.length) {
-      html +=
-        '<h3 class="subhead">' +
-        esc(u.awards) +
-        '</h3><div class="timeline">' +
-        timeline(DATA.awards) +
-        "</div>";
-    }
     return html + "</section>";
   }
 

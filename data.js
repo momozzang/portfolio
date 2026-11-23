@@ -30,10 +30,12 @@ window.PORTFOLIO = {
 
   skills: [
     {
-      title: { en: "Quality & Reliability", ko: "품질·신뢰성" },
+      title: { en: "Quality", ko: "품질" },
+      items: ["AS9100", "ISO 9001"],
+    },
+    {
+      title: { en: "Reliability", ko: "신뢰성" },
       items: [
-        "AS9100",
-        "ISO 9001",
         "HTOL",
         "TC",
         "THB",
@@ -47,28 +49,20 @@ window.PORTFOLIO = {
       ],
     },
     {
-      title: { en: "Semiconductor & Physics", ko: "반도체·물리" },
-      items: [
-        "Semiconductor technology",
-        "Si capacitor",
-        "Optical simulation",
-        "Physics & energy engineering",
-      ],
+      title: { en: "Semiconductor", ko: "반도체" },
+      items: ["Semiconductor technology", "Si capacitor"],
     },
     {
-      title: { en: "Software & Data", ko: "소프트웨어·데이터" },
-      items: [
-        "Python",
-        "Java",
-        "JavaScript",
-        "Julia",
-        "HTML / CSS",
-        "TensorFlow",
-        "PyTorch",
-        "MATLAB",
-        "Data analysis",
-        "Web development",
-      ],
+      title: { en: "Physics", ko: "물리" },
+      items: ["Optical simulation", "Physics & energy engineering"],
+    },
+    {
+      title: { en: "Software", ko: "소프트웨어" },
+      items: ["Python", "Java", "JavaScript", "Julia", "HTML / CSS", "Web development"],
+    },
+    {
+      title: { en: "Data", ko: "데이터" },
+      items: ["TensorFlow", "PyTorch", "MATLAB", "Data analysis"],
     },
     {
       title: { en: "Laboratory", ko: "계측·분석" },

@@ -304,19 +304,46 @@ h1 {
 /* Projects */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 20px;
 }
 
 .card {
+  position: relative;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 24px 24px 22px;
   background: var(--bg);
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  overflow: hidden;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--accent);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
+}
+
+.card .period {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 
 .card h3 {
@@ -326,15 +353,16 @@ h1 {
 }
 
 .card .role {
-  color: var(--accent);
+  color: var(--muted);
   font-size: 0.85rem;
   font-weight: 600;
 }
 
 .card p {
-  margin: 0;
+  margin: 0 0 6px;
   color: #334155;
   font-size: 0.93rem;
+  line-height: 1.65;
 }
 
 .card .tech {
@@ -342,6 +370,8 @@ h1 {
   flex-wrap: wrap;
   gap: 6px;
   margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
 }
 
 .card .tech span {

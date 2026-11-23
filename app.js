@@ -193,14 +193,14 @@
           .join("");
         return (
           '<div class="card">' +
+          '<div class="period">' +
+          esc(p.period) +
+          "</div>" +
           "<h3>" +
           esc(t(p.title)) +
           "</h3>" +
           '<div class="role">' +
           esc(t(p.role)) +
-          "</div>" +
-          '<div class="period">' +
-          esc(p.period) +
           "</div>" +
           "<p>" +
           esc(t(p.description)) +

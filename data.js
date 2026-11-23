@@ -106,8 +106,8 @@ window.PORTFOLIO = {
       role: { en: "Teaching Assistant, General Physics Laboratory", ko: "일반물리실험 조교" },
       period: "2023 – 2024",
       summary: {
-        en: "Assisted lab sessions, guided students, and graded lab reports.",
-        ko: "실험 수업 보조, 학생 지도, 실험 보고서 채점.",
+        en: "Assisted lab sessions and guided students.",
+        ko: "실험 수업 보조 및 학생 지도.",
       },
     },
     {

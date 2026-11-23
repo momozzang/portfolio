@@ -31,7 +31,7 @@ window.PORTFOLIO = {
   skills: [
     {
       title: { en: "Quality", ko: "품질" },
-      items: ["AS9100", "ISO 9001"],
+      items: ["AS9100", "ISO 9001", "NCR / CAPA / SCAR"],
     },
     {
       title: { en: "Reliability", ko: "신뢰성" },
@@ -46,6 +46,8 @@ window.PORTFOLIO = {
         "Accelerated life testing",
         "Failure analysis",
         "Si capacitor reliability",
+        "TDDB lifetime modeling",
+        "RF reliability (RF-HTOL)",
       ],
     },
     {
@@ -72,7 +74,7 @@ window.PORTFOLIO = {
     },
     {
       title: { en: "Data", ko: "데이터" },
-      items: ["TensorFlow", "PyTorch", "MATLAB"],
+      items: ["TensorFlow", "PyTorch", "MATLAB", "Yield analysis"],
     },
     {
       title: { en: "Laboratory", ko: "계측·분석" },

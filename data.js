@@ -14,6 +14,10 @@ window.PORTFOLIO = {
     location: { en: "Republic of Korea", ko: "대한민국" },
     email: "physix9179@gmail.com",
     links: [
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/moses-kim-300992271",
+      },
       { label: "ORCID", url: "https://orcid.org/0009-0004-2859-0396" },
       {
         label: "Google Scholar",

@@ -18,12 +18,12 @@
     });
   }
 
-  // "education" is parked (hidden) for now — re-add to SECTIONS + render() to restore.
   var SECTIONS = [
     "interests",
     "publications",
     "skills",
     "experience",
+    "education",
     "projects",
     "contact",
   ];
@@ -40,7 +40,8 @@
   function hero() {
     var p = DATA.profile;
     var u = DATA.ui[lang];
-    var links = p.links
+    var links = [{ label: "Email", url: "mailto:" + p.email }]
+      .concat(p.links)
       .map(function (l) {
         return (
           '<a class="chip link" href="' +
@@ -236,7 +237,6 @@
     );
   }
 
-  // Parked: hidden from the page for now. Re-add to SECTIONS + render() to restore.
   function education() {
     var u = DATA.ui[lang];
     var html =
@@ -297,6 +297,7 @@
       publications() +
       skills() +
       experience() +
+      education() +
       projects() +
       contact();
     document.getElementById("footNote").textContent =

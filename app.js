@@ -98,15 +98,15 @@
       .map(function (g) {
         var items = g.items
           .map(function (i) {
-            return "<li>" + esc(t(i)) + "</li>";
+            return '<span class="chip">' + esc(t(i)) + "</span>";
           })
           .join("");
         return (
           '<div class="skill-card"><h3>' +
           esc(t(g.title)) +
-          '</h3><ul class="skill-lines">' +
+          '</h3><div class="chips">' +
           items +
-          "</ul></div>"
+          "</div></div>"
         );
       })
       .join("");

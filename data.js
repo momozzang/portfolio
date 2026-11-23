@@ -30,60 +30,53 @@ window.PORTFOLIO = {
 
   skills: [
     {
-      title: { en: "Quality", ko: "품질" },
-      items: ["AS9100", "ISO 9001", "NCR / CAPA / SCAR"],
-    },
-    {
-      title: { en: "Reliability", ko: "신뢰성" },
+      title: { en: "Quality & Reliability", ko: "품질·신뢰성" },
       items: [
-        "HTOL",
-        "TC",
-        "THB",
-        "HAST",
-        "ESD / Latch-up",
-        "Weibull",
-        "Eyring",
-        "Accelerated life testing",
-        "Failure analysis",
-        "Si capacitor reliability",
-        "TDDB lifetime modeling",
-        "RF reliability (RF-HTOL)",
+        { en: "Quality management system: AS9100, ISO 9001", ko: "품질 경영 시스템: AS9100, ISO 9001" },
+        { en: "NCR / CAPA / SCAR", ko: "NCR / CAPA / SCAR" },
+        {
+          en: "Reliability test & analysis: HTOL, TC, THB, HAST, ESD / Latch-up",
+          ko: "신뢰성 시험·분석: HTOL, TC, THB, HAST, ESD / Latch-up",
+        },
+        {
+          en: "TDDB lifetime modeling · RF reliability (RF-HTOL)",
+          ko: "TDDB 수명 모델링 · RF 신뢰성(RF-HTOL)",
+        },
+        {
+          en: "Accelerated life data analysis: Weibull, Eyring",
+          ko: "가속 수명 데이터 분석: Weibull, Eyring",
+        },
+        { en: "Failure analysis · Si capacitor reliability", ko: "불량 분석 · Si 커패시터 신뢰성" },
       ],
     },
     {
-      title: { en: "Semiconductor", ko: "반도체" },
+      title: { en: "Semiconductor & Physics", ko: "반도체·물리" },
       items: [
-        "Si capacitor",
-        "Colloidal quantum dot (CQD)",
-        "Thin-film devices",
-        "Distributed Bragg reflector (DBR)",
+        {
+          en: "Semiconductor: Si capacitor, colloidal quantum dot (CQD), thin-film devices, DBR",
+          ko: "반도체: Si 커패시터, 콜로이드 양자점(CQD), 박막 소자, DBR",
+        },
+        {
+          en: "Physics: optical simulation, spectroscopic ellipsometry, transfer matrix method, effective medium theory",
+          ko: "물리: 광학 시뮬레이션, 분광 엘립소메트리, 전달 행렬법, 유효 매질 이론",
+        },
+        {
+          en: "Characterization: SEM, micro-PL, micro-reflectance, UV-Vis-NIR spectroscopy, reliability test equipment",
+          ko: "특성 평가: SEM, micro-PL, micro-reflectance, UV-Vis-NIR 분광학, 신뢰성 시험 장비",
+        },
       ],
     },
     {
-      title: { en: "Physics", ko: "물리" },
+      title: { en: "Software & Data", ko: "소프트웨어·데이터" },
       items: [
-        "Optical simulation",
-        "Spectroscopic ellipsometry",
-        "Transfer matrix method",
-        "Effective medium theory",
-      ],
-    },
-    {
-      title: { en: "Software", ko: "소프트웨어" },
-      items: ["Python", "Java", "JavaScript", "Julia", "HTML / CSS"],
-    },
-    {
-      title: { en: "Data", ko: "데이터" },
-      items: ["TensorFlow", "PyTorch", "MATLAB", "Yield analysis"],
-    },
-    {
-      title: { en: "Laboratory", ko: "계측·분석" },
-      items: [
-        "SEM",
-        "Micro-PL",
-        "Micro-reflectance",
-        "UV-Vis-NIR spectroscopy",
-        "Reliability test equipment",
+        {
+          en: "Software: Python, Java, JavaScript, Julia, HTML / CSS",
+          ko: "소프트웨어: Python, Java, JavaScript, Julia, HTML / CSS",
+        },
+        {
+          en: "Data: TensorFlow, PyTorch, MATLAB, yield analysis",
+          ko: "데이터: TensorFlow, PyTorch, MATLAB, 수율 분석",
+        },
       ],
     },
   ],
@@ -131,6 +124,28 @@ window.PORTFOLIO = {
   ],
 
   projects: [
+    {
+      title: { en: "RF-HTOL Research", ko: "RF-HTOL 연구" },
+      period: "2025 – 2026",
+      year: 2026,
+      role: { en: "Reliability Engineer", ko: "신뢰성 엔지니어" },
+      tech: ["RF-HTOL", "Reliability"],
+      description: {
+        en: "Reliability evaluation of RF devices using RF-HTOL.",
+        ko: "RF 소자의 RF-HTOL 신뢰성 평가.",
+      },
+    },
+    {
+      title: { en: "AS9100 Certification", ko: "AS9100 인증" },
+      period: "2025",
+      year: 2025,
+      role: { en: "Quality Assurance PM", ko: "품질보증 PM" },
+      tech: ["AS9100", "QMS"],
+      description: {
+        en: "Aerospace quality management system (AS9100) certification.",
+        ko: "항공우주 품질 경영 시스템(AS9100) 인증.",
+      },
+    },
     {
       title: {
         en: "Lunch Menu Recommendation Service",

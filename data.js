@@ -269,6 +269,8 @@ window.PORTFOLIO = {
 
   ui: {
     en: {
+      history: "History",
+      career: "Career Skills",
       interests: "Interests",
       skills: "Skills",
       experience: "Experience",
@@ -279,6 +281,8 @@ window.PORTFOLIO = {
       toggle: "한국어",
     },
     ko: {
+      history: "이력",
+      career: "프로젝트",
       interests: "관심 분야",
       skills: "기술",
       experience: "경력",

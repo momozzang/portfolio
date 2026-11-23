@@ -25,19 +25,27 @@
     "Google Scholar": "M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z",
   };
 
-  var SECTIONS = [
-    "interests",
-    "publications",
-    "skills",
-    "experience",
-    "education",
-    "projects",
-    "contact",
-  ];
+  // Order = page order; numbers shown next to each section title.
+  var SECTIONS = ["history", "skills", "career", "publications", "contact"];
+
+  function num(i) {
+    return i < 9 ? "0" + (i + 1) : String(i + 1);
+  }
+
+  function title(key, label) {
+    var i = SECTIONS.indexOf(key);
+    return (
+      '<div class="sec-head"><h2>' +
+      esc(label) +
+      '</h2><span class="num">' +
+      num(i) +
+      "</span></div>"
+    );
+  }
 
   function renderHeader() {
     var u = DATA.ui[lang];
-    document.getElementById("brand").textContent = t(DATA.profile.name);
+    document.getElementById("brand").textContent = t(DATA.profile.name) + " Portfolio";
     document.getElementById("nav").innerHTML = SECTIONS.map(function (k) {
       return '<a href="#' + k + '">' + esc(u[k]) + "</a>";
     }).join("");
@@ -62,123 +70,123 @@
       .join("");
   }
 
-  function hero() {
+  function rows(list, label, body) {
+    return (
+      '<div class="rows">' +
+      list
+        .map(function (e) {
+          return (
+            '<div class="row"><div class="row-label">' +
+            label(e) +
+            '</div><div class="row-body">' +
+            body(e) +
+            "</div></div>"
+          );
+        })
+        .join("") +
+      "</div>"
+    );
+  }
+
+  function timeline(list) {
+    return rows(
+      list,
+      function (e) {
+        return esc(e.period);
+      },
+      function (e) {
+        var org = e.company || e.school;
+        return (
+          "<h3>" +
+          esc(t(e.role || e.degree)) +
+          "</h3>" +
+          (org ? '<div class="sub">' + esc(t(org)) + "</div>" : "") +
+          (e.summary || e.detail ? "<p>" + esc(t(e.summary || e.detail)) + "</p>" : "")
+        );
+      }
+    );
+  }
+
+  function history() {
     var p = DATA.profile;
     var u = DATA.ui[lang];
-    var links = iconLinks(p.links);
     var interests = DATA.interests
       .map(function (i) {
-        return '<span class="chip">' + esc(t(i)) + "</span>";
+        return "<li>" + esc(t(i)) + "</li>";
       })
       .join("");
     return (
-      '<section class="hero">' +
+      '<section id="history" class="sec">' +
+      title("history", u.history) +
+      '<div class="hero"><div class="hero-main">' +
       "<h1>" +
       esc(t(p.name)) +
       "</h1>" +
       '<p class="lead">' +
       esc(t(p.title)) +
       "</p>" +
-      '<p class="summary">' +
-      esc(t(p.summary)) +
-      "</p>" +
-      '<div class="meta">' +
-      "<span>" +
+      '<div class="meta"><span>' +
       esc(t(p.location)) +
-      "</span>" +
-      '<a href="mailto:' +
+      '</span><a href="mailto:' +
       esc(p.email) +
       '">' +
       esc(p.email) +
-      "</a>" +
-      "</div>" +
+      "</a></div>" +
       '<div class="links">' +
-      links +
-      "</div>" +
-      "</section>" +
-      '<section id="interests" class="section">' +
-      "<h2>" +
+      iconLinks(p.links) +
+      "</div></div>" +
+      '<div class="hero-side"><p class="summary">' +
+      esc(t(p.summary)) +
+      "</p></div></div>" +
+      '<h3 class="bar">' +
       esc(u.interests) +
-      "</h2>" +
-      '<div class="chips">' +
+      "</h3>" +
+      '<div class="rows"><div class="row"><div class="row-label"></div><div class="row-body"><ul>' +
       interests +
-      "</div>" +
+      "</ul></div></div></div>" +
+      '<h3 class="bar">' +
+      esc(u.experience) +
+      "</h3>" +
+      timeline(DATA.experience) +
+      '<h3 class="bar">' +
+      esc(u.education) +
+      "</h3>" +
+      timeline(DATA.education) +
       "</section>"
     );
   }
 
   function skills() {
     var u = DATA.ui[lang];
-    var cards = DATA.skills
-      .map(function (g) {
-        var items = g.items
-          .map(function (i) {
-            var s = t(i);
-            var k = s.indexOf(": ");
-            return (
-              "<li><strong>" +
-              esc(k < 0 ? s : s.slice(0, k)) +
-              "</strong>" +
-              (k < 0 ? "" : esc(s.slice(k))) +
-              "</li>"
-            );
-          })
-          .join("");
+    var list = rows(
+      DATA.skills,
+      function (g) {
+        return "<strong>" + esc(t(g.title)) + "</strong>";
+      },
+      function (g) {
         return (
-          '<div class="skill-card"><h3>' +
-          esc(t(g.title)) +
-          '</h3><ul class="skill-list">' +
-          items +
-          "</ul></div>"
+          "<ul>" +
+          g.items
+            .map(function (i) {
+              var s = t(i);
+              var k = s.indexOf(": ");
+              return (
+                "<li><strong>" +
+                esc(k < 0 ? s : s.slice(0, k)) +
+                "</strong>" +
+                (k < 0 ? "" : esc(s.slice(k))) +
+                "</li>"
+              );
+            })
+            .join("") +
+          "</ul>"
         );
-      })
-      .join("");
-    return (
-      '<section id="skills" class="section"><h2>' +
-      esc(u.skills) +
-      '</h2><div class="skill-grid">' +
-      cards +
-      "</div></section>"
+      }
     );
+    return '<section id="skills" class="sec">' + title("skills", u.skills) + list + "</section>";
   }
 
-  function timeline(rows) {
-    return rows
-      .map(function (e) {
-        return (
-          '<div class="item">' +
-          '<div class="period">' +
-          esc(e.period) +
-          "</div>" +
-          "<div>" +
-          "<h3>" +
-          esc(t(e.role || e.degree || e.text)) +
-          "</h3>" +
-          (e.company || e.school
-            ? '<div class="company">' + esc(t(e.company || e.school)) + "</div>"
-            : "") +
-          (e.summary || e.detail
-            ? "<p>" + esc(t(e.summary || e.detail)) + "</p>"
-            : "") +
-          "</div>" +
-          "</div>"
-        );
-      })
-      .join("");
-  }
-
-  function experience() {
-    var u = DATA.ui[lang];
-    return (
-      '<section id="experience" class="section"><h2>' +
-      esc(u.experience) +
-      '</h2><div class="timeline">' +
-      timeline(DATA.experience) +
-      "</div></section>"
-    );
-  }
-
-  function projects() {
+  function career() {
     var u = DATA.ui[lang];
     var cards = DATA.projects
       .slice()
@@ -186,36 +194,25 @@
         return (b.year || 0) - (a.year || 0);
       })
       .map(function (p) {
-        var tech = (p.tech || [])
-          .map(function (x) {
-            return "<span>" + esc(x) + "</span>";
-          })
-          .join("");
         return (
-          '<div class="card">' +
-          '<div class="period">' +
-          esc(p.period) +
-          "</div>" +
-          "<h3>" +
+          '<article class="project"><h3>' +
           esc(t(p.title)) +
-          "</h3>" +
-          '<div class="role">' +
+          '</h3><div class="project-meta"><span>' +
           esc(t(p.role)) +
-          "</div>" +
-          "<p>" +
+          "</span><span>" +
+          esc((p.tech || []).join(" · ")) +
+          "</span><span>" +
+          esc(p.period) +
+          "</span></div><p>" +
           esc(t(p.description)) +
-          "</p>" +
-          '<div class="tech">' +
-          tech +
-          "</div>" +
-          "</div>"
+          "</p></article>"
         );
       })
       .join("");
     return (
-      '<section id="projects" class="section"><h2>' +
-      esc(u.projects) +
-      '</h2><div class="cards">' +
+      '<section id="career" class="sec">' +
+      title("career", u.career) +
+      '<div class="projects">' +
       cards +
       "</div></section>"
     );
@@ -223,89 +220,63 @@
 
   function publications() {
     var u = DATA.ui[lang];
-    var items = DATA.publications
-      .map(function (p) {
+    var list = rows(
+      DATA.publications,
+      function (p) {
+        return esc(p.year);
+      },
+      function (p) {
         var doi = p.doi
-          ? ' <a href="https://doi.org/' +
+          ? ' · <a href="https://doi.org/' +
             esc(p.doi) +
             '" target="_blank" rel="noopener">doi:' +
             esc(p.doi) +
             "</a>"
           : "";
         return (
-          '<div class="pub">' +
-          '<p class="title">' +
+          '<div class="pub-title">' +
           esc(p.title) +
-          "</p>" +
-          '<p class="authors">' +
+          '</div><div class="pub-meta">' +
           esc(p.authors) +
-          "</p>" +
-          '<p class="venue"><em>' +
+          "</div>" +
+          '<div class="pub-meta"><em>' +
           esc(p.venue) +
-          "</em> · " +
-          esc(p.year) +
+          "</em>" +
           doi +
-          "</p>" +
           "</div>"
         );
-      })
-      .join("");
+      }
+    );
     return (
-      '<section id="publications" class="section"><h2>' +
-      esc(u.publications) +
-      "</h2>" +
-      items +
+      '<section id="publications" class="sec">' +
+      title("publications", u.publications) +
+      list +
       "</section>"
     );
-  }
-
-  function education() {
-    var u = DATA.ui[lang];
-    var html =
-      '<section id="education" class="section"><h2>' +
-      esc(u.education) +
-      '</h2><div class="timeline">' +
-      timeline(DATA.education) +
-      "</div>";
-    return html + "</section>";
   }
 
   function contact() {
     var p = DATA.profile;
     var u = DATA.ui[lang];
-    var links = iconLinks(p.links);
     return (
-      '<section id="contact" class="section">' +
-      "<h2>" +
-      esc(u.contact) +
-      "</h2>" +
-      '<div class="contact">' +
-      '<a href="mailto:' +
+      '<section id="contact" class="sec">' +
+      title("contact", u.contact) +
+      '<div class="contact"><a class="mail" href="mailto:' +
       esc(p.email) +
-      '"><span class="label">Email</span>' +
+      '">' +
       esc(p.email) +
-      "</a>" +
-      '<div class="links">' +
-      links +
-      "</div>" +
-      "</div>" +
-      "</section>"
+      '</a><div class="links">' +
+      iconLinks(p.links) +
+      "</div></div></section>"
     );
   }
 
   function render() {
-    var u = DATA.ui[lang];
     document.documentElement.lang = lang === "ko" ? "ko" : "en";
     document.title = t(DATA.profile.name) + " — " + t(DATA.profile.title);
     renderHeader();
     document.getElementById("app").innerHTML =
-      hero() +
-      publications() +
-      skills() +
-      experience() +
-      education() +
-      projects() +
-      contact();
+      history() + skills() + career() + publications() + contact();
     document.getElementById("footNote").textContent =
       "© " + new Date().getFullYear() + " " + t(DATA.profile.name) + ".";
   }

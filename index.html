@@ -8,28 +8,30 @@
       name="description"
       content="Moses Kim — Reliability & Quality Engineer. Semiconductor reliability and quality systems."
     />
-    <meta name="theme-color" content="#0f172a" />
+    <meta name="theme-color" content="#f6f6f6" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="data:," />
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrap header-inner">
+    <div class="sheet" id="top">
+      <header class="site-header">
         <a class="brand" href="#top" id="brand">Moses Kim</a>
         <nav class="nav" id="nav" aria-label="Sections"></nav>
         <button class="lang-toggle" id="langToggle" type="button">한국어</button>
-      </div>
-    </header>
+      </header>
 
-    <main id="top" class="wrap">
-      <div id="app"></div>
-    </main>
+      <main id="app"></main>
 
-    <footer class="site-footer">
-      <div class="wrap">
+      <footer class="site-footer">
         <p id="footNote"></p>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script src="data.js"></script>
     <script src="app.js"></script>

@@ -116,10 +116,10 @@
             var s = t(i);
             var k = s.indexOf(": ");
             return (
-              "<li>" +
-              (k < 0
-                ? esc(s)
-                : "<strong>" + esc(s.slice(0, k)) + "</strong>" + esc(s.slice(k))) +
+              "<li><strong>" +
+              esc(k < 0 ? s : s.slice(0, k)) +
+              "</strong>" +
+              (k < 0 ? "" : esc(s.slice(k))) +
               "</li>"
             );
           })

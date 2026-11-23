@@ -35,29 +35,27 @@ window.PORTFOLIO = {
   skills: [
     {
       title: { en: "Quality", ko: "품질" },
-      items: ["AS9100", "ISO 9001", "NCR / CAPA / SCAR", "Audit"],
+      items: [
+        "Quality management system: AS9100, ISO 9001",
+        "Audit",
+        "NCR / CAPA / SCAR",
+      ],
     },
     {
       title: { en: "Reliability", ko: "신뢰성" },
       items: [
-        "HTOL",
-        "TC",
-        "THB",
-        "HAST",
-        "ESD / Latch-up",
-        "Weibull",
-        "Eyring",
-        "Accelerated life testing",
-        "Failure analysis",
+        "Reliability test design & analysis: HTOL, TC, THB, HAST, ESD/Latch-up",
+        "Accelerated life data analysis: Weibull, Eyring",
         "Si capacitor reliability",
-        "TDDB lifetime modeling",
-        "RF reliability (RF-HTOL)",
+        "TDDB lifetime modeling: E-model / Power-law, SBD·PBD",
+        "RF reliability: RF-HTOL",
+        "Failure analysis (FA)",
       ],
     },
     {
       title: { en: "Semiconductor", ko: "반도체" },
       items: [
-        "Si capacitor",
+        "Semiconductor technology: Deep Trench Capacitor",
         "Colloidal quantum dot (CQD)",
         "Thin-film devices",
         "Distributed Bragg reflector (DBR)",
@@ -74,18 +72,25 @@ window.PORTFOLIO = {
     },
     {
       title: { en: "Software", ko: "소프트웨어" },
-      items: ["Python", "Java", "JavaScript", "Julia", "HTML / CSS"],
+      items: [
+        "Computer science",
+        "Languages: Python, Java, JavaScript, Julia, HTML / CSS",
+        "In-house quality tool development: TDDB Analyzer, Yield analyzer, Data Platform (Python)",
+        "AI adoption & AI-assisted development",
+      ],
     },
     {
       title: { en: "Data", ko: "데이터" },
-      items: ["TensorFlow", "PyTorch", "MATLAB", "Yield analysis"],
+      items: [
+        "Yield analysis: EDS·FT, wafer map",
+        "Machine learning: TensorFlow, PyTorch",
+        "MATLAB",
+      ],
     },
     {
       title: { en: "Laboratory", ko: "계측·분석" },
       items: [
-        "SEM",
-        "Micro-PL",
-        "Micro-reflectance",
+        "SEM, Micro-PL, Micro-reflectance",
         "UV-Vis-NIR spectroscopy",
         "Reliability test equipment",
       ],

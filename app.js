@@ -44,10 +44,8 @@
     document.getElementById("langToggle").textContent = u.toggle;
   }
 
-  function hero() {
-    var p = DATA.profile;
-    var u = DATA.ui[lang];
-    var links = p.links
+  function iconLinks(links) {
+    return links
       .map(function (l) {
         return (
           '<a class="icon-link" href="' +
@@ -62,6 +60,12 @@
         );
       })
       .join("");
+  }
+
+  function hero() {
+    var p = DATA.profile;
+    var u = DATA.ui[lang];
+    var links = iconLinks(p.links);
     var interests = DATA.interests
       .map(function (i) {
         return '<span class="chip">' + esc(t(i)) + "</span>";
@@ -109,15 +113,23 @@
       .map(function (g) {
         var items = g.items
           .map(function (i) {
-            return '<span class="chip">' + esc(t(i)) + "</span>";
+            var s = t(i);
+            var k = s.indexOf(": ");
+            return (
+              "<li>" +
+              (k < 0
+                ? esc(s)
+                : "<strong>" + esc(s.slice(0, k)) + "</strong>" + esc(s.slice(k))) +
+              "</li>"
+            );
           })
           .join("");
         return (
           '<div class="skill-card"><h3>' +
           esc(t(g.title)) +
-          '</h3><div class="chips">' +
+          '</h3><ul class="skill-list">' +
           items +
-          "</div></div>"
+          "</ul></div>"
         );
       })
       .join("");
@@ -261,17 +273,7 @@
   function contact() {
     var p = DATA.profile;
     var u = DATA.ui[lang];
-    var links = p.links
-      .map(function (l) {
-        return (
-          '<a href="' +
-          esc(l.url) +
-          '" target="_blank" rel="noopener">' +
-          esc(l.label) +
-          "</a>"
-        );
-      })
-      .join("");
+    var links = iconLinks(p.links);
     return (
       '<section id="contact" class="section">' +
       "<h2>" +
@@ -283,7 +285,9 @@
       '"><span class="label">Email</span>' +
       esc(p.email) +
       "</a>" +
+      '<div class="links">' +
       links +
+      "</div>" +
       "</div>" +
       "</section>"
     );

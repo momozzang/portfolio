@@ -75,7 +75,6 @@ window.PORTFOLIO = {
       items: [
         "Computer science",
         "Languages: Python, Java, JavaScript, Julia, HTML / CSS",
-        "In-house quality tool development: TDDB Analyzer, Yield analyzer, Data Platform (Python)",
         "AI adoption & AI-assisted development",
       ],
     },

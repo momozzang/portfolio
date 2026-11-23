@@ -211,7 +211,7 @@ window.PORTFOLIO = {
       period: "2023 – 2025",
       year: 2025,
       role: { en: "Student Researcher", ko: "학생 연구원" },
-      tech: ["Python", "Optical simulation", "Perovskite devices"],
+      tech: ["Python", "Optical simulation"],
       description: {
         en: "Superposition of exciton-polariton E-k dispersion in halide perovskite devices (National Research Foundation of Korea). Optical image analysis: RGB-to-XYZ color conversion by perovskite thickness under light-source intensity, and color charts.",
         ko: "할라이드 페로브스카이트 소자의 엑시톤-폴라리톤 E-k 분산 중첩 연구 (국립연구재단). 광학 이미지 분석: 광원 인텐시티에 비례한 페로브스카이트 두께별 색상 분석(RGB→XYZ 변환 계산, 컬러 차트 제작).",

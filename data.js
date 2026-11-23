@@ -50,23 +50,39 @@ window.PORTFOLIO = {
     },
     {
       title: { en: "Semiconductor", ko: "반도체" },
-      items: ["Semiconductor technology", "Si capacitor"],
+      items: [
+        "Si capacitor",
+        "Colloidal quantum dot (CQD)",
+        "Thin-film devices",
+        "Distributed Bragg reflector (DBR)",
+      ],
     },
     {
       title: { en: "Physics", ko: "물리" },
-      items: ["Optical simulation", "Physics & energy engineering"],
+      items: [
+        "Optical simulation",
+        "Spectroscopic ellipsometry",
+        "Transfer matrix method",
+        "Effective medium theory",
+      ],
     },
     {
       title: { en: "Software", ko: "소프트웨어" },
-      items: ["Python", "Java", "JavaScript", "Julia", "HTML / CSS", "Web development"],
+      items: ["Python", "Java", "JavaScript", "Julia", "HTML / CSS"],
     },
     {
       title: { en: "Data", ko: "데이터" },
-      items: ["TensorFlow", "PyTorch", "MATLAB", "Data analysis"],
+      items: ["TensorFlow", "PyTorch", "MATLAB"],
     },
     {
       title: { en: "Laboratory", ko: "계측·분석" },
-      items: ["SEM", "Micro-PL", "Micro-reflectance", "Reliability test equipment"],
+      items: [
+        "SEM",
+        "Micro-PL",
+        "Micro-reflectance",
+        "UV-Vis-NIR spectroscopy",
+        "Reliability test equipment",
+      ],
     },
   ],
 
